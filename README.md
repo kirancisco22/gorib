@@ -1,4 +1,4 @@
-# GoBGP, and FIB agent over VPP(fd.io)
+# GoBGP, and GoRIB over VPP(fd.io)
 
 ## Overview
 
