@@ -7,7 +7,7 @@ This is done in a single Ubuntu 16.04 VM
                          (1.1.1.1)                         (2.2.2.2)
                          GoBGP1                            GoBGP2
                           |                                 |			 
-                         FIBAgent1                         FIBAgent2
+                         GoRIB1                           GoRIB2
                           |                                 |			 
  ---- 11.1.1.0/24 (vrf1)-VPP1(10.1.2.1)--global--(10.1.2.2)VPP2-(vrf1)22.1.1.0/24)
 	                 
