@@ -27,19 +27,19 @@ with traffic
 [GoBGP] (https://github.com/osrg/gobgp)  
 GoBGP (Apache 2.0) is enhanced with Segment Routing (SR, SRTE), GRPC southbound programming infrastructure, Programming IP, MPLS, SR, SR-TE, VPN (L3VPN) to FIB agent via GRPC. 
 
-### FIB agent
-FIB agent contains, RIB, LFIB for basic route resolution functionality.
-FIB agent contains a gRPC server. A gRPC client (eg. goBGP) can program the FIB agent via the gRPC APIs. 
+### GoRIB
+GoRIB contains, RIB, LFIB for basic route resolution functionality.
+GoRIB contains a gRPC server. A gRPC client (eg. goBGP) can program the FIB agent via the gRPC APIs. 
 When a gRPC client registers to FIB agent, it connects to the forwarder plugin (eg. Go VPP). 
-FIB agent translates the gRPC API into VPP API after it does basic resoltion on certain routes.
-FIB agent also has APIs to provision interfaces and interface addresses to VPP.
+GoRIB translates the gRPC API into VPP API after it does basic resoltion on certain routes.
+GoRIB also has APIs to provision interfaces and interface addresses to VPP.
 We recommend interface address configuration via FIB agent to support certain route resoltion that VPP FIB cannot perform.
 
 Networks/Routes programmed via FIB agent is advertised to GoBGP for advertisements.
 Networks/Routes in a VRF are advertised as VPN routes with VPN labels.
 Networks/Routes in a global VRF are advertised as Labeled unicast routes with labels.
 
-FIB agent reads all the interfaces from VPP in the beginning or whenever an IP address is assigned to an interface via FIB agent. 
+GoRIB reads all the interfaces from VPP in the beginning or whenever an IP address is assigned to an interface via FIB agent. 
 IP address on an interface are programmed FIB agent CLI (executable).
 FIB agent prgrams the interface addresses in VPP.
 
